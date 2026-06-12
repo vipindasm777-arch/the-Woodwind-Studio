@@ -1,0 +1,152 @@
+/* ========================================
+   WOODWIND STUDIO
+======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: #f8fafc;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism */
+.glass-panel {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(
+        to right,
+        #fcd34d,
+        #f59e0b
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Ambient Orbs */
+.ambient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+}
+
+/* Navbar Scroll Effect */
+.nav-scrolled {
+    background: rgba(15,23,42,0.95);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+.btn-primary {
+    background: #f59e0b;
+    color: #0f172a;
+    transition: .3s ease;
+}
+
+.btn-primary:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid #64748b;
+    transition: .3s ease;
+}
+
+.btn-secondary:hover {
+    border-color: #f59e0b;
+    color: #f59e0b;
+}
+
+/* Cards */
+.beat-card {
+    transition: .4s ease;
+}
+
+.beat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(245,158,11,.15);
+}
+
+/* Audio Visualizer */
+.visualizer {
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+    height: 24px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.visualizer.active {
+    opacity: 1;
+}
+
+.bar {
+    width: 4px;
+    background: #f59e0b;
+    border-radius: 3px;
+    animation: bounceBar .5s infinite alternate;
+}
+
+@keyframes bounceBar {
+    from {
+        height: 5px;
+    }
+
+    to {
+        height: 24px;
+    }
+}
+
+/* Fade Animation */
+
+.animate-fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp .8s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal */
+
+.modal {
+    display: none;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f59e0b;
+    border-radius: 20px;
+}
